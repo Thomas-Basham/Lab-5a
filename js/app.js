@@ -9,7 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  return [ (a+b) ,"The sum of 4 and 7 is 11."];
+  let sum1 = (a + b)
+  return [ (a+b) ,`The sum of ${a} and ${b} is ${sum1}.`];
 }
 
 
@@ -28,7 +29,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    return [(a * b), "The product of 5 and 9 is 45."]
+  let product2 = (a * b)
+  return [(a * b), `The product of ${a} and ${b} is ${product2}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -49,11 +51,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sum1 = sum(a , b)[0]
-    let sum2 = sum(sum1 , c)[0]
-    let multiply1 = multiply(a , b)[0]
-    let multiply2 = multiply(multiply1 , c)[0]
-    return [sum2, multiply2, `${a} and ${b} and ${c} sum to ${sum2}.` , `The product of ${a} and ${b} and ${c} is ${multiply2}.`]
+  let sum1 = sum(a , b)[0];
+  let sum2 = sum(sum1 , c)[0];
+  let multiply1 = multiply(a , b)[0];
+  let multiply2 = multiply(multiply1 , c)[0];
+  return [sum2, multiply2, `${a} and ${b} and ${c} sum to ${sum2}.` , `The product of ${a} and ${b} and ${c} is ${multiply2}.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -76,9 +78,9 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
-  let sum2 = sum(testArray[0], testArray[1])[0]
-  let sum3 = sum(sum2, testArray[2])[0]
-  return [sum3 , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum3} is their sum.`]
+  let sum2 = sum(testArray[0], testArray[1])[0];
+  let sum3 = sum(sum2, testArray[2])[0];
+  return [sum3 , `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum3} is their sum.`];
 }
 
 
@@ -100,13 +102,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let product1 = multiply(testArray[0], testArray[1])[0];
+  let product2 = multiply(product1, testArray[2])[0];
+  return [product2,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${product2}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
