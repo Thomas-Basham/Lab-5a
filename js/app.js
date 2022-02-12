@@ -107,6 +107,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   return [product2,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${product2}.`];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
